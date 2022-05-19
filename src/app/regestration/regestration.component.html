@@ -1,0 +1,149 @@
+<app-navbar></app-navbar>
+<div class="my-4 col-8 offset-2">
+      <button type="button" style="margin-top: 44px;" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Create New Regestration      
+      </button>
+      
+      <!--regestration Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Create Regestration</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="row g-3">
+                <div class="col-md-4">
+                  <label for="validationDefault01" class="form-label">Id</label>
+                  <input type="text" class="form-control" id="id" value="" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationDefault01" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="firstnameid" value="" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationDefault02" class="form-label">Last Nmae</label>
+                  <input type="text" class="form-control" id="lastnameid" value="" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationDefault02" class="form-label">Email</label>
+                  <input type="text" class="form-control" id="emailid" value="" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationDefault02" class="form-label">Phone</label>
+                  <input type="text" class="form-control" id="phoneid" value="" required>
+                </div>               
+                <div class="col-12">
+                  <button class="btn btn-secondary" id="submitreg" type="submit">Confirm</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>       
+    </div>
+
+<!-- edit,update,delete modal regestration   -->
+
+<!--edit Modal -->
+<div class="modal fade" id="editeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Regestration</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3">
+          <div class="col-md-4">
+            <label for="validationDefault01" class="form-label">First name</label>
+            <input type="text" class="form-control" id="validationDefault01" value="" required>
+          </div>
+          <div class="col-md-4">
+            <label for="validationDefault02" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="validationDefault02" value="" required>
+          </div>
+          <div class="col-md-4">
+            <label for="validationDefault02" class="form-label">Email</label>
+            <input type="text" class="form-control" id="validationDefault02" value="" required>
+          </div>
+          <div class="col-md-4">
+            <label for="validationDefault02" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="validationDefault02" value="" required>
+          </div>       
+          <div class="col-12">
+            <button class="btn btn-secondary" type="submit">Confirm</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--details Modal -->
+<div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Details Regestration</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3">
+          <div class="col-md-4">
+            <label for="validationDefault01" class="form-label">First name</label>          
+          </div>
+          <div class="col-md-4">
+            <label for="validationDefault02" class="form-label">Last Name</label>
+          </div>
+          <div class="col-md-4">
+            <label for="validationDefault02" class="form-label">Email</label>
+          </div>
+          <div class="col-md-4">
+            <label for="validationDefault02" class="form-label">Phone</label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--delete Modal -->
+<div class="modal fade" id="DeleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3">
+          <div class="col">
+            <label for="validationDefault01" class="form-label">Warning!!!Are you sure to Delete Regestration?</label>           
+          </div>
+          
+          <div class="col-12">
+            <button class="btn btn-secondary" type="submit">Confirm</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- showing table -->
+    <div class="conainer my-4 col-8 offset-2">
+      <table class="table table-striped">
+        <tr class="bg-info">
+          <th>Regestration Id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th style="text-align: center;" colspan="2">Action</th>
+        </tr>
+        <tbody id="myTable">
+      </tbody>
+      </table>
+    </div>

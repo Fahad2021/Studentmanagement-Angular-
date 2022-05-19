@@ -1,0 +1,105 @@
+<app-navbar></app-navbar>
+  <!--course modal -->
+  <div class="my-4 col-8 offset-2">
+    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-top:44px">
+      Create New Course
+    </button>
+    <!-- course add Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> -->
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create Course</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3">
+              <div class="col-md-4">
+                <label for="validationDefault01" class="form-label">Course Id</label>
+                <input type="text" class="form-control" id="idno" value="" required>
+              </div>
+
+              <div class="col-md-4">
+                <label for="validationDefault01" class="form-label">Course name</label>
+                <input type="text" class="form-control" id="coursenameid" value="" required>
+              </div>
+              <div class="col-md-4">
+                <label for="validationDefault02" class="form-label">Duration</label>
+                <input type="text" class="form-control" id="durationnameid" value="" required>
+              </div>
+
+              <div class="col-12">
+                <button class="btn btn-secondary" id="submitbtn" type="submit">Confirm</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--edit Modal -->
+  <div class="modal fade" id="editeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Course</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-3">
+            <div class="col-md-4">
+              <label for="validationDefault01" class="form-label">Course Id</label>
+              <input type="text" class="form-control" id="editcourseid"  required>
+            </div>
+            <div class="col-md-4">
+              <label for="validationDefault01" class="form-label">Course name</label>
+              <input type="text" class="form-control" id="editcoursenameid"  required>
+            </div>
+            <div class="col-md-4">
+              <label for="validationDefault02" class="form-label">Duration</label>
+              <input type="text" class="form-control" id="editdurationnameid"  required>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-secondary" id="edittab" type="submit">Confirm</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--delete Modal -->
+  <div class="modal fade" id="DeleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" class="btnDelete" id="">Delete</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-3">
+            <div class="col">
+              <label for="validationDefault01" class="form-label">Warning!!!Are you sure to Delete Course?</label>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-secondary" id="btnDelteYes" type="button">Yes</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- showing table -->
+  <div class="conainer my-4 col-8 offset-2">
+    <table class="table table-striped">
+      <tr class="bg-info">
+        <th>Course Id</th>
+        <th>Course Name</th>
+        <th>Duration</th>
+        <th style="text-align: center;" colspan="2">Action</th>
+      </tr>
+      <tbody id="myTable">
+      </tbody>
+    </table>
+  </div>

@@ -1,0 +1,109 @@
+<app-navbar></app-navbar>
+<!-- batch modal -->
+    <div class="my-4 col-8 offset-2">
+      <button type="button" style="margin-top:44px" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Create New Batch 
+      </button>
+    </div>
+    <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Create Batch</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="row g-3" >
+                <div class="col-md-4">
+                  <label for="validationDefault01" class="form-label">Batch No.</label>
+                  <input type="text" class="form-control" id="batchnoid" value="" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationDefault01" class="form-label">Batch name</label>
+                  <input type="text" class="form-control" id="batchnameid" value="" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationDefault02" class="form-label">Year</label>
+                  <input type="text" class="form-control" id="batchyearid" value="" required>
+                </div>
+                
+                <div class="col-12">
+                  <button class="btn btn-secondary" id="batchcon" type="submit">Confirm</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>  
+
+
+<!--edit Modal -->
+<div class="modal fade" id="editeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Batch</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3">
+          <div class="col-md-4">
+            <label for="validationDefault01" class="form-label">Batch No.</label>
+            <input type="text" class="form-control" id="validationDefault00" value="" required>
+          </div>
+          <div class="col-md-4">
+            <label for="validationDefault01" class="form-label">Batch name</label>
+            <input type="text" class="form-control" id="validationDefault01" value="" required>
+          </div>
+          <div class="col-md-4">
+            <label for="validationDefault02" class="form-label">Year</label>
+            <input type="text" class="form-control" id="validationDefault02" value="" required>
+          </div>         
+          <div class="col-12">
+            <button class="btn btn-secondary" type="button">Confirm</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--delete Modal -->
+<div class="modal fade" id="DeleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3">
+          <div class="col">
+            <label for="validationDefault01" class="form-label">Warning!!!Are you sure to Delete Batch?</label>           
+          </div>
+          <div class="col-12">
+            <button class="btn btn-secondary" id="deletcourseid" type="button">Confirm</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- showing table -->
+<div class="conainer my-4 col-8 offset-2">
+  <table class="table table-striped">
+    <tr class="bg-info">
+      <th>Batch Id</th>
+      <th>Batch Name</th>
+      <th>Year</th>
+      <th style="text-align: center;" colspan="2">update</th>
+    </tr>
+    <tbody id="myTable">
+  </tbody>
+  </table>
+ 
